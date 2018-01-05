@@ -17,7 +17,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @ComponentScan(basePackages = { "com.test" }, excludeFilters = {
 		@Filter(type = FilterType.ANNOTATION, value = Configuration.class) })
 @EnableTransactionManagement
-
 public class ApplicationConfig {
 
 	@Bean("dataSource")
@@ -32,7 +31,7 @@ public class ApplicationConfig {
 	@Bean
 	public SessionFactory sessionFactory(DataSource dataSource) {
 		LocalSessionFactoryBuilder localSessionFactoryBuilder = new LocalSessionFactoryBuilder(getDataSource());
-		localSessionFactoryBuilder.scanPackages("niit.projectbackend.projectbackend");
+		localSessionFactoryBuilder.scanPackages("com.test.project2backend.model");
 		localSessionFactoryBuilder.addProperties(hibernateProperties());
 		return localSessionFactoryBuilder.buildSessionFactory();
 		// return localSessionFactoryBuilder;
@@ -42,8 +41,8 @@ public class ApplicationConfig {
 	{
 		Properties properties=new Properties();
 		properties.put("hibernate.dialect","org.hibernate.dialect.Oracle10gDialect");
-		properties.put("hibernate_format_sql","true");
 		properties.put("hibernate.show_sql","true");
+		properties.put("hibernate_format_sql","true");
 		properties.put("hibernate.hbm2ddl.auto","update");
 		return properties;
 	}
