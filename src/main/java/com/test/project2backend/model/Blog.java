@@ -1,6 +1,5 @@
 package com.test.project2backend.model;
 
-
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -21,7 +20,7 @@ public class Blog {
 
 	String blog_Content;
 
-	String Blogger_Name;
+	String blogger_Name;
 
 	String status;
 
@@ -53,13 +52,12 @@ public class Blog {
 		this.blog_Content = blog_Content;
 	}
 
-	
 	public String getBlogger_Name() {
-		return Blogger_Name;
+		return blogger_Name;
 	}
 
 	public void setBlogger_Name(String blogger_Name) {
-		Blogger_Name = blogger_Name;
+		this.blogger_Name = blogger_Name;
 	}
 
 	public String getStatus() {
@@ -86,5 +84,4 @@ public class Blog {
 		this.blog_Date = blog_Date;
 	}
 
-	
 }

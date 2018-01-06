@@ -28,6 +28,7 @@ public class ApplicationConfig {
 		dataSource.setPassword("oracledb");
 		return dataSource;
 	}
+
 	@Bean
 	public SessionFactory sessionFactory(DataSource dataSource) {
 		LocalSessionFactoryBuilder localSessionFactoryBuilder = new LocalSessionFactoryBuilder(getDataSource());
@@ -36,21 +37,19 @@ public class ApplicationConfig {
 		return localSessionFactoryBuilder.buildSessionFactory();
 		// return localSessionFactoryBuilder;
 	}
-	
-	public Properties hibernateProperties()
-	{
-		Properties properties=new Properties();
-		properties.put("hibernate.dialect","org.hibernate.dialect.Oracle10gDialect");
-		properties.put("hibernate.show_sql","true");
-		properties.put("hibernate_format_sql","true");
-		properties.put("hibernate.hbm2ddl.auto","update");
+
+	public Properties hibernateProperties() {
+		Properties properties = new Properties();
+		properties.put("hibernate.dialect", "org.hibernate.dialect.Oracle10gDialect");
+		properties.put("hibernate.show_sql", "true");
+		properties.put("hibernate_format_sql", "true");
+		properties.put("hibernate.hbm2ddl.auto", "update");
 		return properties;
 	}
-	
+
 	@Bean
-	public HibernateTransactionManager transactionManager(SessionFactory sessionFactory)
-	{
-		HibernateTransactionManager hibernateTransactionManager=new HibernateTransactionManager(sessionFactory);
-		return hibernateTransactionManager;	
+	public HibernateTransactionManager transactionManager(SessionFactory sessionFactory) {
+		HibernateTransactionManager hibernateTransactionManager = new HibernateTransactionManager(sessionFactory);
+		return hibernateTransactionManager;
 	}
 }
