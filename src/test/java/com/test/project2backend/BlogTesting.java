@@ -39,26 +39,26 @@ public class BlogTesting {
 		blog.setBlog_Name("First Blog");
 		blog.setBlog_Content("This is my First Blog");
 		blog.setBlog_Date(new java.util.Date());
-		blog.setBlogger_Name("Anuj");
+		blog.setBlogger_Name("Ajay");
 		Assert.assertEquals("Data Entered Ureka", true, blogDao.addBlog(blog));
 	}
 
 	@Test
 	public void deleteBlogTest() {
-		blog.setBlog_Id(12);
+		blog=blogDao.getBlog(25);
 		Assert.assertEquals("Data Entered Ureka", true, blogDao.deleteBlog(blog));
 	}
 
 	@Test
 	public void getBlogTest() {
-		blog = blogDao.getBlog(10);
+		blog = blogDao.getBlog(24);
 		Assert.assertNotNull(blog);
 		System.out.println(blog.getBlog_Name());
 	}
 
 	@Test
 	public void updateBlogTest() {
-		blog = blogDao.getBlog(10);
+		blog = blogDao.getBlog(26);
 		blog.setBlogger_Name("Aman");
 		Assert.assertEquals("Data Entered Ureka", true, blogDao.updateBlog(blog));
 	}
@@ -69,8 +69,5 @@ public class BlogTesting {
 		Iterator<Blog> itr = blogList.iterator();
 
 		Assert.assertEquals(true, itr.hasNext());
-		// assertThat(blogList, not(IsEmptyCollection.empty()));
-		// Assert.assertEquals("Blog List", true, !(blogList.isEmpty()));
 	}
-
 }

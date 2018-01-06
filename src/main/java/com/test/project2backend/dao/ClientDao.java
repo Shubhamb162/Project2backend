@@ -17,6 +17,6 @@ public interface ClientDao {
 
 	public List<Client> getALLClient();
 
-	public Client getClient(String ClientEmailId);
+	public Client getClient(String Client_Email_Id);
 
 }

@@ -15,18 +15,26 @@ import com.test.project2backend.model.Job;
 public class JobDaoImplementation implements JobDao {
 
 	@Autowired
-	SessionFactory sessionFactory;
+	private SessionFactory sessionFactory;
 
 	@Override
 	public boolean addJob(Job job) {
-		sessionFactory.getCurrentSession().save(job);
-		return true;
+		try {
+			sessionFactory.getCurrentSession().save(job);
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
 	}
 
 	@Override
 	public boolean deleteJob(Job job) {
-		sessionFactory.getCurrentSession().delete(job);
-		return true;
+		try {
+			sessionFactory.getCurrentSession().delete(job);
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
 	}
 
 	@Override
@@ -36,8 +44,12 @@ public class JobDaoImplementation implements JobDao {
 
 	@Override
 	public boolean updateJob(Job job) {
-		sessionFactory.getCurrentSession().update(job);
-		return true;
+		try {
+			sessionFactory.getCurrentSession().update(job);
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
 	}
 
 	@SuppressWarnings("unchecked")

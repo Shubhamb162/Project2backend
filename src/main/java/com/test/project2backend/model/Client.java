@@ -22,21 +22,21 @@ public class Client {
 
 	@Size(min = 5, max = 10, message = "Your name should be between 5 - 10 characters.")
 	@Pattern(regexp = "[a-zA-Z]{5,10}")
-	private String clientName;
+	private String client_Name;
 
 	@Size(min = 10, message = "You cannot entered lessthan 10 digits.")
-	private String clientMobileNo;
+	private String client_Mobile_No;
 
 	@Column(unique = true)
 	@Pattern(regexp = ".+@.+\\..+", message = "Wrong email!")
-	private String clientEmailId;
+	private String client_Email_Id;
 
 	@NotNull(message = "Please select a password")
 	@Length(min = 5, max = 10, message = "Password should be between 5 - 10 charactes")
 	@Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%*?&])[A-Za-z\\d$@$!%*?&]{8}")
-	private String clientPassword;
+	private String client_Password;
 
-	private String clientConfirmPassword;
+	private String client_Confirm_Password;
 
 	private String role;
 
@@ -48,44 +48,44 @@ public class Client {
 		this.client_Id = client_Id;
 	}
 
-	public String getClientName() {
-		return clientName;
+	public String getClient_Name() {
+		return client_Name;
 	}
 
-	public void setClientName(String clientName) {
-		this.clientName = clientName;
+	public void setClient_Name(String client_Name) {
+		this.client_Name = client_Name;
 	}
 
-	public String getClientMobileNo() {
-		return clientMobileNo;
+	public String getClient_Mobile_No() {
+		return client_Mobile_No;
 	}
 
-	public void setClientMobileNo(String clientMobileNo) {
-		this.clientMobileNo = clientMobileNo;
+	public void setClient_Mobile_No(String client_Mobile_No) {
+		this.client_Mobile_No = client_Mobile_No;
 	}
 
-	public String getClientEmailId() {
-		return clientEmailId;
+	public String getClient_Email_Id() {
+		return client_Email_Id;
 	}
 
-	public void setClientEmailId(String clientEmailId) {
-		this.clientEmailId = clientEmailId;
+	public void setClient_Email_Id(String client_Email_Id) {
+		this.client_Email_Id = client_Email_Id;
 	}
 
-	public String getClientPassword() {
-		return clientPassword;
+	public String getClient_Password() {
+		return client_Password;
 	}
 
-	public void setClientPassword(String clientPassword) {
-		this.clientPassword = clientPassword;
+	public void setClient_Password(String client_Password) {
+		this.client_Password = client_Password;
 	}
 
-	public String getClientConfirmPassword() {
-		return clientConfirmPassword;
+	public String getClient_Confirm_Password() {
+		return client_Confirm_Password;
 	}
 
-	public void setClientConfirmPassword(String clientConfirmPassword) {
-		this.clientConfirmPassword = clientConfirmPassword;
+	public void setClient_Confirm_Password(String client_Confirm_Password) {
+		this.client_Confirm_Password = client_Confirm_Password;
 	}
 
 	public String getRole() {
@@ -95,6 +95,7 @@ public class Client {
 	public void setRole(String role) {
 		this.role = role;
 	}
+
 
 	
 }

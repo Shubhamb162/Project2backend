@@ -13,94 +13,94 @@ public class Job {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	private Integer jobId;
+	private Integer job_Id;
 
-	private String jobTitle;
+	private String job_Title;
 
-	private String jobDescription;
+	private String job_Description;
 
-	private Integer jobPackage;
+	private Integer job_Package;
 
-	private String jobQualification;
+	private String job_Qualification;
 
-	private String companyName;
+	private Date job_Posted_Date;
 
-	private String companyLocation;
+	private String company_Name;
 
-	private String yearOfExperience;
+	private String company_Location;
 
-	private Date jobPostedDate;
+	private String year_Of_Experience;
 
-	public Integer getJobId() {
-		return jobId;
+	public Integer getJob_Id() {
+		return job_Id;
 	}
 
-	public void setJobId(Integer jobId) {
-		this.jobId = jobId;
+	public void setJob_Id(Integer job_Id) {
+		this.job_Id = job_Id;
 	}
 
-	public String getJobTitle() {
-		return jobTitle;
+	public String getJob_Title() {
+		return job_Title;
 	}
 
-	public void setJobTitle(String jobTitle) {
-		this.jobTitle = jobTitle;
+	public void setJob_Title(String job_Title) {
+		this.job_Title = job_Title;
 	}
 
-	public String getJobDescription() {
-		return jobDescription;
+	public String getJob_Description() {
+		return job_Description;
 	}
 
-	public void setJobDescription(String jobDescription) {
-		this.jobDescription = jobDescription;
+	public void setJob_Description(String job_Description) {
+		this.job_Description = job_Description;
 	}
 
-	public Integer getJobPackage() {
-		return jobPackage;
+	public Integer getJob_Package() {
+		return job_Package;
 	}
 
-	public void setJobPackage(Integer jobPackage) {
-		this.jobPackage = jobPackage;
+	public void setJob_Package(Integer job_Package) {
+		this.job_Package = job_Package;
 	}
 
-	public String getJobQualification() {
-		return jobQualification;
+	public String getJob_Qualification() {
+		return job_Qualification;
 	}
 
-	public void setJobQualification(String jobQualification) {
-		this.jobQualification = jobQualification;
+	public void setJob_Qualification(String job_Qualification) {
+		this.job_Qualification = job_Qualification;
 	}
 
-	public String getCompanyName() {
-		return companyName;
+	public Date getJob_Posted_Date() {
+		return job_Posted_Date;
 	}
 
-	public void setCompanyName(String companyName) {
-		this.companyName = companyName;
+	public void setJob_Posted_Date(Date job_Posted_Date) {
+		this.job_Posted_Date = job_Posted_Date;
 	}
 
-	public String getCompanyLocation() {
-		return companyLocation;
+	public String getCompany_Name() {
+		return company_Name;
 	}
 
-	public void setCompanyLocation(String companyLocation) {
-		this.companyLocation = companyLocation;
+	public void setCompany_Name(String company_Name) {
+		this.company_Name = company_Name;
 	}
 
-	public String getYearOfExperience() {
-		return yearOfExperience;
+	public String getCompany_Location() {
+		return company_Location;
 	}
 
-	public void setYearOfExperience(String yearOfExperience) {
-		this.yearOfExperience = yearOfExperience;
+	public void setCompany_Location(String company_Location) {
+		this.company_Location = company_Location;
 	}
 
-	public Date getJobPostedDate() {
-		return jobPostedDate;
+	public String getYear_Of_Experience() {
+		return year_Of_Experience;
 	}
 
-	public void setJobPostedDate(Date jobPostedDate) {
-		this.jobPostedDate = jobPostedDate;
+	public void setYear_Of_Experience(String year_Of_Experience) {
+		this.year_Of_Experience = year_Of_Experience;
 	}
 
 }
